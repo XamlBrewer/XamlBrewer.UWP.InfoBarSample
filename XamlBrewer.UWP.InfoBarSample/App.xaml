@@ -1,8 +1,8 @@
-﻿<Application
-    x:Class="XamlBrewer.UWP.InfoBarSample.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:XamlBrewer.UWP.InfoBarSample">
+﻿<Application x:Class="XamlBrewer.UWP.InfoBarSample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:XamlBrewer.UWP.InfoBarSample"
+             RequestedTheme="Light">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -10,6 +10,9 @@
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
+            <Color x:Key="SystemAccentColor">DarkRed</Color>
+            <SolidColorBrush x:Key="SystemAccentColorBrush"
+                             Color="{StaticResource SystemAccentColor}" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

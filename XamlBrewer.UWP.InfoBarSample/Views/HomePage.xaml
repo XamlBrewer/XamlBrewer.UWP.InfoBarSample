@@ -1,0 +1,69 @@
+﻿<Page x:Class="XamlBrewer.UWP.InfoBarSample.Views.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:XamlBrewer.UWP.InfoBarSample.Views"
+      xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="Transparent">
+    <Grid Background="Transparent">
+
+        <StackPanel VerticalAlignment="Top">
+            <!-- Office 365 Status Bar -->
+            <winui:InfoBar Title="UPDATES ARE AVAILABLE"
+                           Message="Do you want to update this app right now? It will close and reopen."
+                           Severity="Informational"
+                           IsOpen="True"
+                           Margin="0 0 0 4">
+                <winui:InfoBar.ActionButton>
+                    <Button Content="Update" />
+                </winui:InfoBar.ActionButton>
+            </winui:InfoBar>
+
+            <!-- Visual Studio -->
+            <winui:InfoBar Title="Performance report"
+                           Message="There's this weird extension slowing down the startup."
+                           Severity="Informational"
+                           IsOpen="True">
+                <winui:InfoBar.ActionButton>
+                    <HyperlinkButton Content="Tell me more about this"
+                                     Foreground="Blue" />
+                </winui:InfoBar.ActionButton>
+            </winui:InfoBar>
+        </StackPanel>
+
+        <!-- Winforms Status Bar -->
+        <winui:InfoBar Title="OOPS"
+                       Message="Division by zero. Dude, I told you so ..."
+                       Severity="Error"
+                       IsOpen="True"
+                       VerticalAlignment="Bottom"
+                       HorizontalContentAlignment="Center"
+                       Margin="0 0 0 80">
+        </winui:InfoBar>
+
+        <!-- Toast (with ignored customizations) -->
+        <winui:InfoBar Title="WOOHOO"
+                       Message="Data has been saved properly."
+                       Severity="Success"
+                       IsOpen="True"
+                       CornerRadius="8"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Height="120">
+        </winui:InfoBar>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Width="240">
+            <TextBox Header="Votes"
+                     Text="200" />
+            <!-- Validation Panel -->
+            <winui:InfoBar Title="Not amused"
+                           Message="I think we need a recount ..."
+                           Severity="Warning"
+                           IsOpen="True">
+            </winui:InfoBar>
+        </StackPanel>
+    </Grid>
+</Page>
