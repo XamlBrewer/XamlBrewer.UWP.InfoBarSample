@@ -25,10 +25,38 @@
             <winui:InfoBar Title="Performance report"
                            Message="There's this weird extension slowing down the startup."
                            Severity="Informational"
-                           IsOpen="True">
+                           IsOpen="True"
+                           Margin="0 0 0 4">
                 <winui:InfoBar.ActionButton>
                     <HyperlinkButton Content="Tell me more about this"
                                      Foreground="Blue" />
+                </winui:InfoBar.ActionButton>
+            </winui:InfoBar>
+
+            <!-- One that Edge and Outlook should have -->
+            <winui:InfoBar Title="Preferences updated"
+                           Message="We changed your user preferences, you like it?"
+                           Severity="Informational"
+                           IsOpen="True">
+                <winui:InfoBar.ActionButton>
+                    <winui:DropDownButton>
+                        <TextBlock FontFamily="Segoe MDL2 Assets"
+                                   FontSize="14"
+                                   Text="&#xE76E;" />
+                        <winui:DropDownButton.Flyout>
+                            <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                                <MenuFlyoutItem Icon="Emoji2"
+                                                Text="Keep" />
+                                <MenuFlyoutItem Text="Revert">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon Glyph="&#xED54;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutItem Icon="Emoji"
+                                                Text="Revert and never touch my preferences again" />
+                            </MenuFlyout>
+                        </winui:DropDownButton.Flyout>
+                    </winui:DropDownButton>
                 </winui:InfoBar.ActionButton>
             </winui:InfoBar>
         </StackPanel>
