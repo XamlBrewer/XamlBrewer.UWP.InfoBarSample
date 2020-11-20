@@ -80,6 +80,10 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Right"
                        Height="120">
+            <winui:InfoBar.Content>
+                <TextBlock Foreground="DimGray"
+                           Padding="0 0 0 12">Keep up the good work ...</TextBlock>
+            </winui:InfoBar.Content>
         </winui:InfoBar>
         <StackPanel VerticalAlignment="Center"
                     HorizontalAlignment="Left"
