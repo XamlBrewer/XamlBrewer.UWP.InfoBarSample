@@ -7,7 +7,8 @@
       xmlns:winui="using:Microsoft.UI.Xaml.Controls"
       mc:Ignorable="d"
       Background="Transparent"
-      xmlns:primitiveContract7Present="using:Microsoft.UI.Xaml.Controls.Primitives?IsApiContractPresent(Windows.Foundation.UniversalApiContract,7)">
+      xmlns:primitiveContract7Present="using:Microsoft.UI.Xaml.Controls.Primitives?IsApiContractPresent(Windows.Foundation.UniversalApiContract,7)"
+      xmlns:controls="using:XamlBrewer.UWP.Controls">
     <Page.Resources>
         <Thickness x:Key="InfoBarIconMargin">10 10 20 20</Thickness>
         <Style x:Key="InfoCardStyle"
@@ -223,17 +224,18 @@
                            Severity="Success"
                            IsOpen="True"
                            Margin="0 0 0 8" />
-            <winui:InfoBar Style="{StaticResource InfoCardStyle}"
-                           Title="But then again"
-                           Message="it's probably not a good idea in the longer term."
-                           Severity="Warning"
-                           IsOpen="True"
-                           Margin="0 0 0 8" />
-            <winui:InfoBar Style="{StaticResource InfoCardStyle}"
-                           Title="You'd better not"
-                           Message="because you may mess up theming, and backward and forward compatibility."
-                           Severity="Error"
-                           IsOpen="True" />
+            <controls:AutoClosingInfoBar AutoCloseInterval="10000"
+                                         Style="{StaticResource InfoCardStyle}"
+                                         Title="But then again"
+                                         Message="it's probably not a good idea in the longer term."
+                                         Severity="Warning"
+                                         IsOpen="True"
+                                         Margin="0 0 0 8" />
+            <controls:AutoClosingInfoBar Style="{StaticResource InfoCardStyle}"
+                                         Title="You'd better not"
+                                         Message="because you may mess up theming, and backward and forward compatibility."
+                                         Severity="Error"
+                                         IsOpen="True" />
         </StackPanel>
     </Grid>
 </Page>
