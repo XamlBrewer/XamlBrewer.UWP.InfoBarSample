@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using WinUI = Microsoft.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls;
 
 namespace XamlBrewer.UWP.InfoBarSample.Views
 {
@@ -7,6 +8,18 @@ namespace XamlBrewer.UWP.InfoBarSample.Views
         public HomePage()
         {
             this.InitializeComponent();
+
+            var infoBar = new WinUI.InfoBar
+            {
+                Title = "OOPS",
+                Message = "Division by zero. Dude, I told you so ...",
+                Severity = WinUI.InfoBarSeverity.Error,
+                IsOpen = true,
+                VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Bottom,
+                Margin = new Windows.UI.Xaml.Thickness(0, 0, 0, 80)
+            };
+
+            RootGrid.Children.Add(infoBar);
         }
     }
 }
