@@ -7,6 +7,15 @@
       mc:Ignorable="d"
       Background="Transparent">
     <Grid Background="Transparent">
-
+        <TextBlock>
+            <Run>This app demonstrates some usages of the WinUI 2.5 InfoBar control.</Run>
+            <LineBreak />
+            <LineBreak />
+            <Bold>Credits</Bold>
+            <LineBreak />
+            <Run Text="Background image designed by " /><Hyperlink NavigateUri="http://www.freepik.com">starline / Freepik</Hyperlink><Run>.</Run>
+            <LineBreak />
+            <Run Text="Custom template inspired by " /><Hyperlink NavigateUri="https://github.com/microsoft/microsoft-ui-xaml/issues/913">the originally proposed layout</Hyperlink><Run>.</Run>
+        </TextBlock>
     </Grid>
 </Page>

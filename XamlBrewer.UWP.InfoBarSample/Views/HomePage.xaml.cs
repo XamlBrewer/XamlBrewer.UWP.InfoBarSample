@@ -21,5 +21,10 @@ namespace XamlBrewer.UWP.InfoBarSample.Views
 
             RootGrid.Children.Add(infoBar);
         }
+
+        private void MenuFlyoutItem_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            PreferencesInfoBar.IsOpen = false;
+        }
     }
 }

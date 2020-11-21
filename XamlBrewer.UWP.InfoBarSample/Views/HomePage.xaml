@@ -35,10 +35,12 @@
             </winui:InfoBar>
 
             <!-- One that Edge and Outlook should have -->
-            <winui:InfoBar Title="Preferences updated"
+            <winui:InfoBar x:Name="PreferencesInfoBar"
+                           Title="Preferences updated"
                            Message="We changed your user preferences, you like it?"
                            Severity="Informational"
-                           IsOpen="True">
+                           IsOpen="True"
+                           IsClosable="False">
                 <winui:InfoBar.ActionButton>
                     <winui:DropDownButton>
                         <TextBlock FontFamily="Segoe MDL2 Assets"
@@ -47,14 +49,17 @@
                         <winui:DropDownButton.Flyout>
                             <MenuFlyout Placement="BottomEdgeAlignedLeft">
                                 <MenuFlyoutItem Icon="Emoji2"
-                                                Text="Keep" />
-                                <MenuFlyoutItem Text="Revert">
+                                                Text="Keep"
+                                                Click="MenuFlyoutItem_Click" />
+                                <MenuFlyoutItem Text="Revert"
+                                                Click="MenuFlyoutItem_Click">
                                     <MenuFlyoutItem.Icon>
                                         <FontIcon Glyph="&#xED54;" />
                                     </MenuFlyoutItem.Icon>
                                 </MenuFlyoutItem>
                                 <MenuFlyoutItem Icon="Emoji"
-                                                Text="Revert and never touch my preferences again" />
+                                                Text="Revert and never touch my preferences again"
+                                                Click="MenuFlyoutItem_Click" />
                             </MenuFlyout>
                         </winui:DropDownButton.Flyout>
                     </winui:DropDownButton>
