@@ -22,7 +22,7 @@
                 </winui:InfoBar.ActionButton>
             </winui:InfoBar>
 
-            <!-- Visual Studio -->
+            <!-- Visual Studio Status Bar -->
             <winui:InfoBar Title="Performance report"
                            Message="There's this weird extension slowing down the startup."
                            Severity="Informational"
@@ -87,8 +87,9 @@
                        HorizontalAlignment="Right"
                        Height="120">
             <winui:InfoBar.Content>
-                <TextBlock Foreground="DimGray"
-                           Padding="0 0 0 12">Keep up the good work ...</TextBlock>
+                <TextBlock Text="Keep up the good work ..."
+                           Foreground="DimGray"
+                           Padding="0 0 0 12" />
             </winui:InfoBar.Content>
         </winui:InfoBar>
         <StackPanel VerticalAlignment="Center"
@@ -100,8 +101,7 @@
             <winui:InfoBar Title="Not amused"
                            Message="I think we need a recount ..."
                            Severity="Warning"
-                           IsOpen="True">
-            </winui:InfoBar>
+                           IsOpen="True" />
         </StackPanel>
     </Grid>
 </Page>
