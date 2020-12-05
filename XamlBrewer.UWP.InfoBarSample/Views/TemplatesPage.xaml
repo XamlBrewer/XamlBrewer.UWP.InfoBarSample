@@ -146,7 +146,6 @@
                                                FontWeight="{StaticResource InfoBarTitleFontWeight}"
                                                Foreground="{ThemeResource InfoBarTitleForeground}"
                                                FontSize="{StaticResource InfoBarTitleFontSize}"
-                                               primitiveContract7Present:InfoBarPanel.HorizontalMargin="{StaticResource InfoBarTitleHorizontalLayoutMargin}"
                                                AutomationProperties.LandmarkType="Navigation"
                                                Text="{TemplateBinding Title}"
                                                TextWrapping="WrapWholeWords"
@@ -156,11 +155,9 @@
                                                FontWeight="{StaticResource InfoBarMessageFontWeight}"
                                                Foreground="{ThemeResource InfoBarMessageForeground}"
                                                FontSize="{StaticResource InfoBarMessageFontSize}"
-                                               primitiveContract7Present:InfoBarPanel.HorizontalMargin="{StaticResource InfoBarMessageHorizontalLayoutMargin}"
                                                Text="{TemplateBinding Message}"
                                                TextWrapping="WrapWholeWords"
-                                               Margin="0 4 0 0"
-                                               primitiveContract7Present:InfoBarPanel.VerticalMargin="{StaticResource InfoBarMessageVerticalLayoutMargin}" />
+                                               Margin="0 4 0 0" />
                                 </StackPanel>
                                 <ContentPresenter Content="{TemplateBinding ActionButton}"
                                                   Grid.Column="2"
@@ -169,8 +166,6 @@
                                         <Style TargetType="Button">
                                             <Setter Property="MinWidth"
                                                     Value="{StaticResource InfoBarActionButtonMinWidth}" />
-                                            <Setter Property="Height"
-                                                    Value="{StaticResource InfoBarActionButtonHeight}" />
                                             <Setter Property="Padding"
                                                     Value="{StaticResource InfoBarActionButtonPadding}" />
                                         </Style>
@@ -179,18 +174,10 @@
                                                     Value="{ThemeResource InfoBarHyperlinkButtonFontSize}" />
                                             <Setter Property="Foreground"
                                                     Value="{ThemeResource InfoBarHyperlinkButtonForeground}" />
-                                            <Setter Property="Height"
-                                                    Value="{StaticResource InfoBarHyperlinkButtonHeight}" />
                                             <Setter Property="Padding"
                                                     Value="{StaticResource InfoBarHyperlinkButtonPadding}" />
                                         </Style>
                                     </ContentPresenter.Resources>
-                                    <primitiveContract7Present:InfoBarPanel.HorizontalMargin>
-                                        <StaticResource ResourceKey="InfoBarActionHorizontalLayoutMargin" />
-                                    </primitiveContract7Present:InfoBarPanel.HorizontalMargin>
-                                    <primitiveContract7Present:InfoBarPanel.VerticalMargin>
-                                        <StaticResource ResourceKey="InfoBarActionVerticalLayoutMargin" />
-                                    </primitiveContract7Present:InfoBarPanel.VerticalMargin>
                                 </ContentPresenter>
                                 <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}"
                                                   Content="{TemplateBinding Content}"
